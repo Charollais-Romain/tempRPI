@@ -1,14 +1,14 @@
-
 <?php
-$i;
 $temperature = array(10);
- $fp=fopen("/home/pi/temp.txt","r");
+ $fp=fopen("/home/pi/tt.txt","r");
  if($fp==NULL) echo "Erreur ouverture";
  else{
-    $valTemp = base_convert($hex, 16, 10);
- echo $entier;
- sleep(1);
- fclose($fp);
+   $hex = fgets($fp);
+   $valTemp = base_convert($hex, 16, 10);
+   echo $valTemp;
+   echo "test";
+   sleep(1);
+   fclose($fp);
  }
 
 ?> 
